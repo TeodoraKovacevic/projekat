@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(207, 49, 104);
+    color: white;
+}
+a{
+    text-decoration: none;
+}
+nav a{
+    color: white;
+}
+ul{
+    list-style: none;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+button{
+    cursor: pointer;
+    outline: none;
+    border: none;
+    width: 10rem;
+    height: 2rem;
+    border-radius: 20%;
+    background-color: rgb(117, 31, 46);
+    color: white;
+    margin: 1rem;
+}
+button a{
+    color: white;
+}
+.dugme{
+    animation-name: animOne;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+}
+nav{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    /*width: 100vw;
+    min-width: 30rem;*/
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(117, 31, 46);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+.naPocetak{
+    position: fixed; /* fiksirana pozicija */
+    bottom: 40px; /* udaljenost od donje ivice ekrana */
+    right: 40px; /* udaljenost od desne ivice ekrana */
+	text-decoration: none; /* običan tekst / nije podvučen */
+    color: #fff; /* boja teksta */
+    background-color: rgba(0, 0, 0, 0.3); /* 30% vidljivost crne pozadine */
+    padding: 15px;
+}
+.naPocetak:hover{
+    background-color:  rgba(0, 0, 0, 0.5); /* 50% vidljivost crne pozadine */
+}
+#menu{
+    position: absolute;
+    top: 2.5rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+#menu .bar{
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.section1{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1px;
+    grid-template-rows: 1fr 2fr 2fr 1fr 1fr;
+
+}
+.div1{
+    grid-row: 2;
+}
+.div2{
+    grid-row: 2;
+}
+.div3{
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.div4{
+    grid-row: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.div5{
+    grid-row: 5;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.slike{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.slike img{
+    object-fit: cover;
+    width: 30%;
+    height: 20rem;
+}
+p{
+    width: 50%;
+    margin: auto;
+}
+.misljenja{
+    display: flex;
+}
+h1{
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    text-shadow: 2px 2px 10px  black;
+}
+h3{
+    text-shadow: 2px 2px 10px  black;
+}
+
+@keyframes animOne {
+    0%{
+        box-shadow: 0px 0px 0px 0px  rgb(117, 31, 46);
+    }
+    25%{
+        box-shadow: 0px 0px 2.5px 2.5px rgb(173, 112, 112);
+    }
+    100%{
+        box-shadow: 0px 0px 5px 5px rgb(255, 255, 255);;
+    }
+}
+
+
+button{
+    transition: all ease-in-out 0.3s;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+@media screen and (max-width:850px){
+    nav{
+        flex-direction: column;
+    }
+   #menu{
+    display: flex;
+   }
+   #list{
+    display: none;
+   }
+   #list ul{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  #list li{
+    justify-content: center;
+    text-align: center;
+  }
+  #list li a{
+    padding: 1rem 1rem;
+  }
+
+  #list .active{
+    display: flex;
+  }
+
+  .section1{
+    display: flex;
+    flex-direction: column;
+  }
+  .slike{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  .slike img{
+    object-fit: cover;
+    width: 50%;
+    }
+  .misljenja{
+        display: flex;
+        flex-direction: column;
+    }
+  
+}

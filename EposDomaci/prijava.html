@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIMBO</title>
+    <link rel="stylesheet" href="css/stylePrijava.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <nav>
+        <h2>LIM<span class="bo">BO</span></h2>
+        <div id="list">
+         <ul>
+             <li>
+                <a href="pocetna.html">Početna</a> 
+             </li>
+             <li>
+                 <a href="oNama.html">O nama</a> 
+             </li>
+             <li>
+                <a href="cenovnik.html">Cenovnik</a>
+             </li>
+             <li>
+                <a href="prijava.html">Prijava</a> 
+             </li>
+             <li>
+             <a href="kontakt.html">Kontakt</a> 
+             </li>
+         </ul>
+        </div>
+         <a href="" id="menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </a>
+     </nav>
+     <div class="forma">
+
+
+        <form id="forma">
+          <label for="name">Ime i prezime</label>
+          <input id="name" type="text" name="Name"placeholder="Ime i prezime">
+          
+          <label for="number">Vaš broj telefona</label>
+          <input id="number" type="text" name="Number" placeholder="Broj telefona" >
+          
+          <label for="email" >E-mail adresa</label>
+          <input id="email" type="email" name="Email" placeholder="e-mail" >
+
+          <label for="ples">Vrsta plesa: </label>
+          <select name="ples" id="ples" >
+              <option value="balet">balet</option>
+              <option value="latino plesovi">latino plesovi</option>
+              <option value="hip-hop">hip-hop</option>
+              <option value="folklor">folklor</option>
+          </select>
+          
+          <label for="polje">Poruka za nas</label>
+          <textarea name="polje" id="polje" cols="30" rows="10" placeholder=" Važno nam je Vaše mišljenje"></textarea>
+         
+          <input id="submit" type="submit" value="Pošalji">
+          
+
+        </form>
+      </div>
+      <a href="#" class="naPocetak">VRH</a>
+      <script src="js/script.js"></script>
+</body>
+</html>

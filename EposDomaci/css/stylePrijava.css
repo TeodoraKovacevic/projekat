@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(207, 49, 104);
+    color: white;
+}
+a{
+    text-decoration: none;
+}
+nav a{
+    color: white;
+}
+ul{
+    list-style: none;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+button{
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+nav{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    /*width: 100vw;
+    min-width: 30rem;*/
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(117, 31, 46);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.naPocetak{
+  position: fixed; /* fiksirana pozicija */
+  bottom: 40px; /* udaljenost od donje ivice ekrana */
+  right: 40px; /* udaljenost od desne ivice ekrana */
+  text-decoration: none; /* običan tekst / nije podvučen */
+  color: #fff; /* boja teksta */
+  background-color: rgba(0, 0, 0, 0.3); /* 30% vidljivost crne pozadine */
+  padding: 15px;
+}
+.naPocetak:hover{
+  background-color:  rgba(0, 0, 0, 0.5); /* 50% vidljivost crne pozadine */
+}
+#menu{
+  position: absolute;
+  top: 2.5rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+#menu .bar{
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+}
+.forma{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.forma p {
+    margin-bottom: 5rem;
+  }
+  
+.forma form {
+    width: 300px;
+    margin: auto;
+  }
+
+.forma label {
+      font-size: 1.4rem;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+.forma input {
+    display: block;
+    margin-bottom: 1.5rem;
+    padding: 0.8rem;
+    width: 20rem;
+    border: 2px solid rgb(207, 49, 104);
+    position: relative;
+    background-color: white;
+  
+  }
+
+  .forma select{
+    display: block;
+    width: 10rem;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid rgb(207, 49, 104);
+    position: relative;
+    background-color: white;
+    color: gray;
+  }
+
+  .forma option{
+    color: grey;
+    font-size: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+  }
+  
+.forma input[type="submit"] {
+    color: black;
+    border: 2px solid rgb(207, 49, 104);
+    background-color: white;
+    width: 50%;
+  }
+
+.forma input[type="submit"]:hover {
+    background-color: gray;
+    transition: 0.3s;
+    color: white;
+  }
+
+  @media screen and (max-width:850px){
+    nav{
+        flex-direction: column;
+    }
+   #menu{
+    display: flex;
+   }
+   #list{
+    display: none;
+   }
+   #list ul{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  #list li{
+    justify-content: center;
+    text-align: center;
+  }
+  #list li a{
+    padding: 1rem 1rem;
+  }
+  
+}
+  
